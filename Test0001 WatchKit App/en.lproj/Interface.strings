@@ -1,0 +1,57 @@
+
+/* Class = "WKInterfaceMenuItem"; title = "trash"; ObjectID = "0q1-mu-wco"; */
+"0q1-mu-wco.title" = "trash";
+
+/* Class = "WKInterfaceButton"; title = "ToMap"; ObjectID = "2Nt-Je-ea7"; */
+"2Nt-Je-ea7.title" = "ToMap";
+
+/* Class = "WKInterfaceButton"; title = "Button"; ObjectID = "4QQ-cm-9i2"; */
+"4QQ-cm-9i2.title" = "Button";
+
+/* Class = "WKInterfaceMenuItem"; title = "Info"; ObjectID = "6Lh-ca-NVM"; */
+"6Lh-ca-NVM.title" = "Info";
+
+/* Class = "WKInterfaceController"; title = "Table"; ObjectID = "735-r1-xLE"; */
+"735-r1-xLE.title" = "Table";
+
+/* Class = "WKInterfaceButton"; title = "ToTable"; ObjectID = "8Kq-fw-uEz"; */
+"8Kq-fw-uEz.title" = "ToTable";
+
+/* Class = "WKInterfaceController"; title = "Main"; ObjectID = "AgC-eL-Hgc"; */
+"AgC-eL-Hgc.title" = "Main";
+
+/* Class = "WKInterfaceLabel"; text = "One"; ObjectID = "Bon-Pz-8CQ"; */
+"Bon-Pz-8CQ.text" = "One";
+
+/* Class = "WKInterfaceLabel"; text = "Two"; ObjectID = "Bon-Pz-8CQ"; */
+"Bon-Pz-8CQ.text[device=watch42mm]" = "Two";
+
+/* Class = "WKInterfaceLabel"; text = "Two"; ObjectID = "GD9-i9-STY"; */
+"GD9-i9-STY.text" = "Two";
+
+/* Class = "WKInterfaceButton"; title = "ToMenu"; ObjectID = "O12-nu-TZr"; */
+"O12-nu-TZr.title" = "ToMenu";
+
+/* Class = "WKInterfaceLabel"; text = "Alert Label"; ObjectID = "XkS-y5-khE"; */
+"XkS-y5-khE.text" = "Alert Label";
+
+/* Class = "WKInterfaceController"; title = "Map"; ObjectID = "Z5F-v9-8qv"; */
+"Z5F-v9-8qv.title" = "Map";
+
+/* Class = "WKInterfaceController"; title = "Custom"; ObjectID = "btH-fC-Q1H"; */
+"btH-fC-Q1H.title" = "Custom";
+
+/* Class = "WKInterfaceButton"; title = "ToCustom"; ObjectID = "gqc-w2-mbJ"; */
+"gqc-w2-mbJ.title" = "ToCustom";
+
+/* Class = "WKInterfaceLabel"; text = "Three"; ObjectID = "osy-rF-11u"; */
+"osy-rF-11u.text" = "Three";
+
+/* Class = "WKInterfaceMenuItem"; title = "Add"; ObjectID = "qhs-Xi-JaL"; */
+"qhs-Xi-JaL.title" = "Add";
+
+/* Class = "WKInterfaceController"; title = "Menu"; ObjectID = "tT3-7U-K16"; */
+"tT3-7U-K16.title" = "Menu";
+
+/* Class = "WKInterfaceMenuItem"; title = "More"; ObjectID = "u3e-Lv-LTB"; */
+"u3e-Lv-LTB.title" = "More";

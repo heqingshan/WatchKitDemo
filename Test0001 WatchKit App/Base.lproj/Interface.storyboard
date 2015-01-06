@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+    </dependencies>
+    <scenes>
+        <!--首页-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="首页" id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <button width="1" alignment="left" title="Modal" id="8Kq-fw-uEz">
+                            <connections>
+                                <segue destination="zai-vj-sal" kind="modal" id="MsP-ma-45g"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Single" id="O12-nu-TZr">
+                            <connections>
+                                <action selector="pushTest" destination="AgC-eL-Hgc" id="HNf-BE-XQH"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Multiple" id="2Nt-Je-ea7">
+                            <connections>
+                                <action selector="pushesTest" destination="AgC-eL-Hgc" id="1Pi-Jp-2Sg"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Other" id="gqc-w2-mbJ">
+                            <connections>
+                                <action selector="otherTest" destination="AgC-eL-Hgc" id="4da-bF-bu1"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="ToParent" id="uNF-Cy-TUC">
+                            <connections>
+                                <action selector="openParentAppTest" destination="AgC-eL-Hgc" id="SCs-7Z-41Y"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Unknow" id="06W-dv-rEs"/>
+                    </items>
+                    <menu key="menu" id="m2l-Jf-g1f">
+                        <items>
+                            <menuItem title="Storyboard" icon="more" id="N6W-Dc-SCf"/>
+                        </items>
+                    </menu>
+                    <connections>
+                        <segue destination="735-r1-xLE" kind="relationship" relationship="nextPage" id="6GO-or-DVg"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="357"/>
+        </scene>
+        <!--表格-->
+        <scene sceneID="e0I-aA-Rnh">
+            <objects>
+                <controller identifier="myTableController" title="表格" id="735-r1-xLE" customClass="TableController">
+                    <items>
+                        <slider width="1" alignment="left" value="8" maximum="8" steps="8" id="zQm-6D-X0w">
+                            <connections>
+                                <action selector="tapSlider:" destination="735-r1-xLE" id="MXX-zh-hBl"/>
+                            </connections>
+                        </slider>
+                        <table alignment="center" id="7UN-4H-36S">
+                            <items>
+                                <tableRow identifier="MainRowType" id="tT1-a1-uRx" customClass="MainRowType">
+                                    <group key="rootItem" width="1" height="37.5" alignment="left" spacing="10" id="nZI-gS-aSZ">
+                                        <items>
+                                            <imageView width="30" height="30" alignment="left" verticalAlignment="center" id="6wx-uu-L9d"/>
+                                            <label alignment="left" verticalAlignment="center" text="Label" textAlignment="left" id="iJK-zq-WFG"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="rowDescription" destination="iJK-zq-WFG" id="g3y-pl-eja"/>
+                                        <outlet property="rowIcon" destination="6wx-uu-L9d" id="6nS-WH-xaB"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="mySlider" destination="zQm-6D-X0w" id="SNV-UI-K8n"/>
+                        <outlet property="myTable" destination="7UN-4H-36S" id="TXa-KU-UhL"/>
+                        <segue destination="tT3-7U-K16" kind="relationship" relationship="nextPage" id="LpR-iA-CBq"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="507" y="347"/>
+        </scene>
+        <!--Modal-->
+        <scene sceneID="KbG-EZ-XOw">
+            <objects>
+                <controller title="Modal" id="zai-vj-sal">
+                    <items>
+                        <switch width="1" alignment="left" value="YES" title="Switch" id="rwO-rp-hsB"/>
+                        <slider width="1" alignment="left" value="0.5" steps="2" id="hyj-Qb-o29"/>
+                        <button width="1" alignment="left" title="Modal" id="GKx-Ee-Aob"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="507" y="672"/>
+        </scene>
+        <!--Push-->
+        <scene sceneID="wrv-er-3Nm">
+            <objects>
+                <controller identifier="pushsTest" title="Push" id="k15-iR-ny0">
+                    <items>
+                        <separator alignment="left" id="X6g-g2-5gb"/>
+                        <button width="1" alignment="left" title="Button" id="apY-nk-kOC"/>
+                        <separator alignment="left" id="uav-xW-s1V"/>
+                        <imageView width="80" height="80" alignment="center" image="pic6" id="ufV-I1-XwV"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="790" y="672"/>
+        </scene>
+        <!--One-->
+        <scene sceneID="4fP-mW-kU3">
+            <objects>
+                <controller identifier="pushOneTest" title="One" id="iEf-Kb-Dmy">
+                    <items>
+                        <switch width="1" alignment="left" value="YES" title="Switch" id="O04-6B-eMK"/>
+                        <slider width="1" alignment="left" value="0.5" steps="2" id="3pb-em-e11"/>
+                        <dateLabel alignment="center" id="3gi-gS-Im0">
+                            <dateFormatterStyle key="dateStyle" none="YES" short="YES"/>
+                            <dateFormatterStyle key="timeStyle" none="YES" short="YES"/>
+                        </dateLabel>
+                        <timer alignment="center" id="VKV-0e-lap"/>
+                    </items>
+                    <connections>
+                        <segue destination="vJ7-NL-6r7" kind="relationship" relationship="nextPage" id="nRo-6Z-RoP"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1020" y="672"/>
+        </scene>
+        <!--Two-->
+        <scene sceneID="Hvn-rL-qbE">
+            <objects>
+                <controller identifier="pushTwoTest" title="Two" id="vJ7-NL-6r7">
+                    <items>
+                        <button width="1" alignment="left" title="Button" id="Ptg-uk-i7W"/>
+                        <button width="1" alignment="left" title="Button" id="Fqr-QY-ASJ"/>
+                        <button width="1" alignment="left" title="Button" id="JZH-h7-Yax"/>
+                    </items>
+                    <connections>
+                        <segue destination="VOg-PS-Pbj" kind="relationship" relationship="nextPage" id="93a-W1-i9Q"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1251" y="672"/>
+        </scene>
+        <!--Three-->
+        <scene sceneID="KA4-zV-ul9">
+            <objects>
+                <controller identifier="pushThreeTest" title="Three" id="VOg-PS-Pbj">
+                    <items>
+                        <dateLabel alignment="center" id="OJz-FS-7HW">
+                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <dateFormatterStyle key="dateStyle" none="YES" short="YES"/>
+                            <dateFormatterStyle key="timeStyle" none="YES" short="YES"/>
+                        </dateLabel>
+                        <timer alignment="center" id="S8f-Zj-1b2">
+                            <color key="textColor" red="0.0" green="0.49803921569999998" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                        </timer>
+                        <label alignment="center" text="dasfasfdasfasfasdfasfasdfasdfasdfasdfasfasf" textAlignment="center" numberOfLines="3" id="5zA-7z-f1z">
+                            <color key="textColor" red="0.17616691477724644" green="1" blue="0.28883549633307337" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1464" y="672"/>
+        </scene>
+        <!--菜单-->
+        <scene sceneID="62G-EP-cIh">
+            <objects>
+                <controller title="菜单" id="tT3-7U-K16" customClass="MenuController">
+                    <items>
+                        <dateLabel alignment="center" id="Orh-z3-qh8">
+                            <dateFormatterStyle key="dateStyle" none="YES" short="YES"/>
+                            <dateFormatterStyle key="timeStyle" none="YES" short="YES"/>
+                        </dateLabel>
+                        <timer alignment="center" id="eWm-dr-qDe"/>
+                        <button width="1" height="41" alignment="left" title="Button" id="E6T-3A-Prr"/>
+                    </items>
+                    <menu key="menu" id="lBs-nN-Fjm">
+                        <items>
+                            <menuItem title="添加" icon="add" id="Q95-QS-Nac">
+                                <connections>
+                                    <action selector="ddd" destination="tT3-7U-K16" id="RtI-Aa-rSc"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="信息" icon="info" id="yCC-Mv-syV">
+                                <connections>
+                                    <action selector="info" destination="tT3-7U-K16" id="pQL-2Y-Olp"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="更多" icon="more" id="bA7-fQ-7aA">
+                                <connections>
+                                    <action selector="more" destination="tT3-7U-K16" id="rZ3-cJ-E53"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="垃圾" icon="trash" id="GL4-eA-hkr">
+                                <connections>
+                                    <action selector="trash" destination="tT3-7U-K16" id="VF1-NI-alP"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <segue destination="Z5F-v9-8qv" kind="relationship" relationship="nextPage" id="1Uk-4f-46b"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="790" y="347"/>
+        </scene>
+        <!--普通-->
+        <scene sceneID="iDO-ny-gjH">
+            <objects>
+                <controller title="普通" id="btH-fC-Q1H">
+                    <items>
+                        <separator alignment="left" id="uTY-Vk-rLr"/>
+                        <label alignment="center" text="开心一二三四五" id="Bon-Pz-8CQ"/>
+                        <separator alignment="left" id="g81-y8-qKu"/>
+                        <group alignment="center" spacing="3" id="GdL-EC-UBl">
+                            <items>
+                                <imageView width="62" height="62" alignment="left" verticalAlignment="center" image="pic5" id="Mu3-RI-IKs"/>
+                                <separator alignment="left" id="0VP-bV-J7s"/>
+                                <imageView width="62" height="62" alignment="right" verticalAlignment="center" image="pic3" id="p5k-Z5-akU"/>
+                            </items>
+                            <variation key="default">
+                                <mask key="items">
+                                    <exclude reference="0VP-bV-J7s"/>
+                                </mask>
+                            </variation>
+                            <variation key="device=watch38mm">
+                                <mask key="items">
+                                    <include reference="0VP-bV-J7s"/>
+                                </mask>
+                            </variation>
+                            <variation key="device=watch42mm" spacing="8"/>
+                        </group>
+                        <separator alignment="left" id="PX7-q4-b2x"/>
+                        <button width="1" height="38" alignment="left" title="按钮" id="4QQ-cm-9i2"/>
+                        <separator alignment="left" id="H34-qW-1PX"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1251" y="347"/>
+        </scene>
+        <!--地图-->
+        <scene sceneID="Vgu-bV-Oh0">
+            <objects>
+                <controller title="地图" id="Z5F-v9-8qv" customClass="MapController">
+                    <items>
+                        <map alignment="center" verticalAlignment="center" id="NYT-ZW-ZQR"/>
+                    </items>
+                    <connections>
+                        <outlet property="myMap" destination="NYT-ZW-ZQR" id="Q7V-Bq-aSJ"/>
+                        <segue destination="btH-fC-Q1H" kind="relationship" relationship="nextPage" id="b8w-BR-EHJ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1020" y="347"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController">
+                    <items>
+                        <group alignment="left" contentMode="scaleAspectFill" radius="10" id="t8f-Gd-c4y">
+                            <items>
+                                <label alignment="left" text="Label" id="bPU-Nu-Dg2"/>
+                            </items>
+                        </group>
+                        <group alignment="left" id="uCw-4Q-Ouw">
+                            <items>
+                                <imageView alignment="center" id="e2q-se-WaJ"/>
+                            </items>
+                        </group>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="myImage" destination="e2q-se-WaJ" id="SvI-ia-8hQ"/>
+                        <outlet property="myTitle" destination="bPU-Nu-Dg2" id="2Nu-cV-6hL"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="WEf-q8-5CK">
+            <objects>
+                <notificationController spacing="5" id="I19-Xi-YVx">
+                    <items>
+                        <imageView width="80" height="80" alignment="center" image="pic7" animationDuration="2" id="Rz8-dv-hWl"/>
+                        <label alignment="center" text="My Invitation" id="OpX-zY-qXE">
+                            <color key="textColor" red="0.15137575919999999" green="0.60822065520000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="MyCategory" descriptionFormat="Hello My Category" offsetNotificationContent="NO" id="uLs-gl-1FU">
+                        <color key="sashColor" red="1" green="0.45154677500923979" blue="0.1340756244343021" alpha="1" colorSpace="calibratedRGB"/>
+                    </notificationCategory>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="OpX-zY-qXE" id="9Wj-Sx-38O"/>
+                        <segue destination="okm-O1-7kg" kind="relationship" relationship="dynamicNotificationInterface" id="5Au-HH-27Q"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="242" y="1037"/>
+        </scene>
+        <!--My Notification Controller-->
+        <scene sceneID="5JQ-E7-lvJ">
+            <objects>
+                <controller spacing="5" id="okm-O1-7kg" customClass="MyNotificationController">
+                    <items>
+                        <imageView width="80" height="80" alignment="center" image="pic7" animationDuration="2" id="4hh-W9-ok3"/>
+                        <label alignment="center" text="My Invitation" id="AqH-PE-9Zl">
+                            <color key="textColor" red="0.15137575919999999" green="0.60822065520000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <group width="1" alignment="left" id="930-WQ-YTW">
+                            <items>
+                                <label alignment="left" text="Day:" id="ULg-z4-ilw"/>
+                                <label alignment="right" text="Label" id="DtT-1A-NzF"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="hbb-TF-DvX">
+                            <items>
+                                <label alignment="left" text="Time:" id="8ez-T4-Pus"/>
+                                <label alignment="right" text="Label" id="JGB-ka-hKS"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="Z23-Ua-Hkp">
+                            <items>
+                                <label alignment="left" text="Where:" id="WWY-y2-3Nf"/>
+                                <label alignment="right" text="Label" minimumScaleFactor="0.10000000000000001" id="Efm-ew-UeR"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="Oup-CV-Zi3">
+                            <items>
+                                <label alignment="left" text="Note:" id="bbq-2q-AoD"/>
+                            </items>
+                        </group>
+                        <label alignment="center" text="Label" textAlignment="center" numberOfLines="0" id="s3C-o5-lpl"/>
+                    </items>
+                    <connections>
+                        <outlet property="day" destination="DtT-1A-NzF" id="spk-47-7vL"/>
+                        <outlet property="location" destination="Efm-ew-UeR" id="F9C-at-wxg"/>
+                        <outlet property="message" destination="s3C-o5-lpl" id="YQo-gI-5DQ"/>
+                        <outlet property="time" destination="JGB-ka-hKS" id="Ham-3d-QbO"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="560" y="1036.25"/>
+        </scene>
+    </scenes>
+</document>
